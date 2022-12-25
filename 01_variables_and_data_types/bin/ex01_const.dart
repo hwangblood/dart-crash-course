@@ -1,5 +1,7 @@
 void main(List<String> args) {
   const name = 'Foo';
-  // invalid code
+  print(name);
+
+  // FIXME invalid code
   // name = 'Hello';
 }
