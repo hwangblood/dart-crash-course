@@ -2,6 +2,6 @@ void main(List<String> args) {
   const name = 'Foo';
   print(name);
 
-  // FIXME invalid code
+  // ! invalid code
   // name = 'Hello';
 }
