@@ -17,6 +17,7 @@ void main(List<String> args) {
   final Map<String, String> someMap = {'foo': 'bar'};
   print(someMap['foo']);
 
+  // ignore: equal_elements_in_set
   final Set<int> someSet = {1, 2, 3, 1};
   print(someSet);
 

@@ -8,6 +8,7 @@ void main(List<String> args) {
   // ignore: non_constant_identifier_names
   final Hello = 'Helo';
   print(Hello);
+  // ignore: non_constant_identifier_names
   final Wow = 'Wow';
   print(Wow);
 

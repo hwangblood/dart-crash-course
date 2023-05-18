@@ -3,6 +3,7 @@ void main(List<String> args) {
 
   // you would never invoke the function and assign
   // the result to a variable
+  // ignore: unused_local_variable
   final void value = greet(); // ! must not do this!
 }
 
