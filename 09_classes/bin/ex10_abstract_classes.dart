@@ -32,63 +32,15 @@ void main(List<String> args) {
   motorcycle.dofromNewClass();
 }
 
-class Car extends Vehicle {
-  Car({
-    required String name,
-  }) : super(
-          name: name,
-          kind: VehicleKind.car,
-        );
-
-  @override
-  void doSomething() => print('Car $name is doing something');
-
-  @override
-  String toString() => 'Car(name: $name, speed: $speed)';
-
-  @override
-  double speed = 400;
-}
-
-class MotorCycle implements Vehicle, NewClass {
-  String _name;
-
-  final VehicleKind _kind = VehicleKind.motorcycle;
-
-  MotorCycle({required String name, required this.speed}) : _name = name;
-
-  @override
-  VehicleKind get kind => _kind;
-
-  @override
-  String get name => _name;
-
-  @override
-  set name(String newName) {
-    _name = newName;
-  }
-
-  @override
-  double speed;
-
-  @override
-  void accelerate() => print('MotorCycle $name is accelerating');
-
-  @override
-  void decelerate() => print('MotorCycle $name is decelerating');
-
-  @override
-  void dofromNewClass() => print('MotorCycle $name is doing from NewClass');
-
-  @override
-  void doSomething() => print('MotorCycle $name is doing something');
-
-  @override
-  String toString() => 'MotorCycle(name: $name, speed: $speed)';
-}
-
 abstract class NewClass {
   void dofromNewClass();
+}
+
+enum VehicleKind {
+  car,
+  truck,
+  motorcycle,
+  bicycle,
 }
 
 abstract class Vehicle {
@@ -108,9 +60,48 @@ abstract class Vehicle {
   void doSomething();
 }
 
-enum VehicleKind {
-  car,
-  truck,
-  motorcycle,
-  bicycle,
+class Car extends Vehicle {
+  Car({
+    required String name,
+  }) : super(
+          name: name,
+          kind: VehicleKind.car,
+        );
+
+  @override
+  void doSomething() => print('Car $name is doing something');
+
+  @override
+  String toString() => 'Car(name: $name, speed: $speed)';
+
+  @override
+  double speed = 400;
+}
+
+class MotorCycle implements Vehicle, NewClass {
+  @override
+  String name;
+
+  @override
+  double speed;
+
+  @override
+  final VehicleKind kind = VehicleKind.motorcycle;
+
+  MotorCycle({required this.name, required this.speed});
+
+  @override
+  void accelerate() => print('MotorCycle $name is accelerating');
+
+  @override
+  void decelerate() => print('MotorCycle $name is decelerating');
+
+  @override
+  void doSomething() => print('MotorCycle $name is doing something');
+
+  @override
+  void dofromNewClass() => print('MotorCycle $name is doing from NewClass');
+
+  @override
+  String toString() => 'MotorCycle(name: $name, speed: $speed)';
 }
