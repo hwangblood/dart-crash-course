@@ -25,6 +25,7 @@ void describe(Iterable<BreathingThings> values) {
 }
 
 typedef BreathingThings<T extends CanBreathe> = Map<String, T>;
+// typedef BreathingThings = Map<String, CanBreathe>;
 
 mixin CanBreathe {
   void breathe();
