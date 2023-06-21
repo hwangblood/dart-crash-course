@@ -15,8 +15,8 @@ Iterable<String> getNames() sync* {
   yield 'Name #last';
 }
 
-Iterable<String> templateNames({int? count = 2}) sync* {
-  for (var i = 0; i < count!; i++) {
+Iterable<String> templateNames({int count = 2}) sync* {
+  for (var i = 0; i < count; i++) {
     print('Producing Name #$i');
     yield 'Name #$i';
   }

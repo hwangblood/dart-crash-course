@@ -2,6 +2,8 @@ void main(List<String> args) async {
   // * Stream.asyncExpand
 
   /* 
+    With every value that a stream produces, you can create another stream
+
     ? what is the process of asyncExpand
     getNames()
         |
