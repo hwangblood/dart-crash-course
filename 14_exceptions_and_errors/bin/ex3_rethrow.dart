@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  // Rethrow
+  // * Rethrow
 
   try {
     tryCreatingPerson(age: 20);
