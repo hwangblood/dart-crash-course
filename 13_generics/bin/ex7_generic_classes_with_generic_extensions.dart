@@ -8,6 +8,11 @@ void main(List<String> args) {
 
   print(tuple.sum);
   print(swapped.sum);
+
+  const tuple2 = Tuple(1, '123');
+  print(tuple2.swap());
+  // ! don't have sum getter for non-num Tuple
+  // print(tuple2.sum);
 }
 
 class Tuple<L, R> {
