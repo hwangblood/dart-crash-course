@@ -24,6 +24,7 @@ void main(List<String> args) {
   print('$integerValue2 ${integerValue2.runtimeType}');
 
   try {
+    // ignore: unused_local_variable
     final String stringValue2 = eitherIntOrDouble2();
   } catch (e) {
     print(e);
