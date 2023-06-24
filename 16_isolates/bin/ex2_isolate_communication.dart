@@ -6,11 +6,15 @@ void main(List<String> args) async {
   // * Isolate Communication
 
   /* 
-    Using SendPort to communucate between Isolates, each Isolates have their own
-    ReceivePort
+    Using ReceivePort and SendPort to communucate with Isolates
 
-    In this example, we always create new Isolates to do the work when user 
+    In this example, we always create a new Isolate to do the work when user 
     input a message
+
+    Tips:
+    When using switch-case in a loop, please don't use break keyword to 
+    terminate the switch-case, that would terminate the whole loop. Instea with
+    continue  keyword
    */
 
   do {
